@@ -9,7 +9,8 @@ export default {
     // 处理主页面
     const filePath = url.pathname;
     console.log('filePath:', filePath);
-    if (filePath === '/' || filePath === '/index.html') {
+    // if (filePath === '/' || filePath === '/index.html') {
+      if (filePath === '/index.html') {
         console.log('Serving index.html',env);
         return new Response(await env.__STATIC_CONTENT.get('index.html'), {
         headers: {
